@@ -17,8 +17,6 @@ tasks:
     src: ./tmp/vorp/server.cfg
     dest: ./server.cfg
     
-    
-
    # Prepare Database
   - action: connect_database
   - action: query_database
@@ -29,16 +27,13 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
-   
-  - action: download_file
-    path: ./tmp/files/ghmattimysql-v1.8.7.zip
-    url: https://github.com/VORPCORE/ghmattimysql-oxmysql/releases/download/v1.8.7/ghmattimysql-v1.8.7.zip
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/ghmattimysql-v1.8.7.zip
-    
     
   # Download VORP resources
+  - action: download_github
+    src: https://github.com/VORPCORE/ghmattimysql-oxmysql
+    ref: main
+    dest: ./resources/[vorp]/ghmattimysql
+    
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Core
     ref: main
