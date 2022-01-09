@@ -1,3 +1,4 @@
+$engine: 3
 $onesync: on
 name: VORP Framework
 version: 1.0.0
@@ -28,14 +29,15 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
-
-- action: download_file
+   
+  - action: download_file
     path: ./tmp/files/ghmattimysql-v1.8.7.zip
     url: https://github.com/VORPCORE/ghmattimysql-oxmysql/releases/download/v1.8.7/ghmattimysql-v1.8.7.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/ghmattimysql-v1.8.7.zip
-
+    
+    
   # Download VORP resources
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Core
