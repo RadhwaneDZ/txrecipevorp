@@ -58,7 +58,7 @@ tasks:
     src: https://github.com/VORPCORE/VORP-Inventory
     ref: main
     dest: ./resources/[vorp]/VORP-Inventory
- 
+
   - action: download_file
     path: ./tmp/files/main.zip
     url: https://github.com/VORPCORE/vorp_ml_policejob/archive/refs/heads/main.zip
@@ -66,86 +66,7 @@ tasks:
     dest: ./resources/[standalone]
     src: ./tmp/files/main.zip
 
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_bossmanager
-    ref: main
-    dest: ./resources/[vorp]/vorp_bossmanager
-
- - action: download_github
-    src: https://github.com/VORPCORE/VORP-AdminMenu
-    ref: main
-    dest: ./resources/[vorp]/VORP-AdminMenu
-
- - action: download_github
-    src: https://github.com/VORPCORE/VORP-ClothingStore
-    ref: main
-    dest: ./resources/[vorp]/VORP-ClothingStore
-
- - action: download_github
-    src: https://github.com/VORPCORE/Vorp_walkanim
-    ref: main
-    dest: ./resources/[vorp]/Vorp_walkanim
-
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_weaponsv2
-    ref: main
-    dest: ./resources/[vorp]/vorp_weaponsv2
-
- - action: download_github
-    src: https://github.com/VORPCORE/VORP-BarberShop
-    ref: main
-    dest: ./resources/[vorp]/VORP-BarberShop
-
- - action: download_github
-    src: https://github.com/VORPCORE/VORP-WeaponStore
-    ref: main
-    dest: ./resources/[vorp]/VORP-WeaponStore
-
- - action: download_github
-    src: https://github.com/VORPCORE/VORP-Stables
-    ref: main
-    dest: ./resources/[vorp]/VORP-Stables
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Metabolism
-    ref: main
-    dest: ./resources/[vorp]/VORP-Metabolism
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Banks
-    ref: main
-    dest: ./resources/[vorp]/VORP-Banks
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Hunting
-    ref: main
-    dest: ./resources/[vorp]/VORP-Hunting
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Fishing
-    ref: main
-    dest: ./resources/[vorp]/VORP-Fishing
-
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Housing
-    ref: main
-    dest: ./resources/[vorp]/VORP-Housing
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-PostMan
-    ref: main
-    dest: ./resources/[vorp]/VORP-PostMan
     
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-Cinema
-    ref: main
-    dest: ./resources/[vorp]/VORP-Cinema
-
-- action: download_github
-    src: https://github.com/VORPCORE/VORP-WoodCutter
-    ref: main
-    dest: ./resources/[vorp]/VORP-WoodCutter
  # Clean up
   - action: remove_path
     path: ./tmp
