@@ -1,0 +1,162 @@
+$engine: 3
+$onesync: on
+name: VORP Framework
+version: 1.0.0
+author: VORPCORE & radhwane for TXadmin
+description: REDM vorpcore
+
+tasks:
+  #  Download Base Files
+  - action: download_github
+    src: https://github.com/RadhwaneDZ/txrecipevorp
+    ref: main
+    dest: ./tmp/vorp
+    
+ - action: move_path
+    src: ./tmp/vorp/server.cfg
+    dest: ./server.cfg
+
+   # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/vorp/vorp.sql
+
+  # Downloading Standalone Resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[cfx-default]
+
+- action: download_file
+    path: ./tmp/files/ghmattimysql-v1.8.7.zip
+    url: https://github.com/VORPCORE/ghmattimysql-oxmysql/releases/download/v1.8.7/ghmattimysql-v1.8.7.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ghmattimysql-v1.8.7.zip
+
+  # Download VORP resources
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Core
+    ref: main
+    dest: ./resources/[vorp]/VORP-Core
+
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Inputs
+    ref: main
+    dest: ./resources/[vorp]/VORP-Inputs
+
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Character
+    ref: main
+    dest: ./resources/[vorp]/VORP-Character
+
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Stores
+    ref: main
+    dest: ./resources/[vorp]/VORP-Stores
+
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Inventory
+    ref: main
+    dest: ./resources/[vorp]/VORP-Inventory
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_ml_policejob
+    ref: main
+    dest: ./resources/[vorp]/vorp_ml_policejob
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_whitelist
+    ref: main
+    dest: ./resources/[vorp]/vorp_whitelist
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_radius
+    ref: main
+    dest: ./resources/[vorp]/vorp_radius
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_traffic
+    ref: main
+    dest: ./resources/[vorp]/vorp_traffic
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_bossmanager
+    ref: main
+    dest: ./resources/[vorp]/vorp_bossmanager
+
+ - action: download_github
+    src: https://github.com/VORPCORE/VORP-AdminMenu
+    ref: main
+    dest: ./resources/[vorp]/VORP-AdminMenu
+
+ - action: download_github
+    src: https://github.com/VORPCORE/VORP-ClothingStore
+    ref: main
+    dest: ./resources/[vorp]/VORP-ClothingStore
+
+ - action: download_github
+    src: https://github.com/VORPCORE/Vorp_walkanim
+    ref: main
+    dest: ./resources/[vorp]/Vorp_walkanim
+
+ - action: download_github
+    src: https://github.com/VORPCORE/vorp_weaponsv2
+    ref: main
+    dest: ./resources/[vorp]/vorp_weaponsv2
+
+ - action: download_github
+    src: https://github.com/VORPCORE/VORP-BarberShop
+    ref: main
+    dest: ./resources/[vorp]/VORP-BarberShop
+
+ - action: download_github
+    src: https://github.com/VORPCORE/VORP-WeaponStore
+    ref: main
+    dest: ./resources/[vorp]/VORP-WeaponStore
+
+ - action: download_github
+    src: https://github.com/VORPCORE/VORP-Stables
+    ref: main
+    dest: ./resources/[vorp]/VORP-Stables
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Metabolism
+    ref: main
+    dest: ./resources/[vorp]/VORP-Metabolism
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Banks
+    ref: main
+    dest: ./resources/[vorp]/VORP-Banks
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Hunting
+    ref: main
+    dest: ./resources/[vorp]/VORP-Hunting
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Fishing
+    ref: main
+    dest: ./resources/[vorp]/VORP-Fishing
+
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Housing
+    ref: main
+    dest: ./resources/[vorp]/VORP-Housing
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-PostMan
+    ref: main
+    dest: ./resources/[vorp]/VORP-PostMan
+    
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-Cinema
+    ref: main
+    dest: ./resources/[vorp]/VORP-Cinema
+
+- action: download_github
+    src: https://github.com/VORPCORE/VORP-WoodCutter
+    ref: main
+    dest: ./resources/[vorp]/VORP-WoodCutter
