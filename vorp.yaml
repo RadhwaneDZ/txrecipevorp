@@ -160,3 +160,6 @@ tasks:
     src: https://github.com/VORPCORE/VORP-WoodCutter
     ref: main
     dest: ./resources/[vorp]/VORP-WoodCutter
+ # Clean up
+  - action: remove_path
+    path: ./tmp
