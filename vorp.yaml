@@ -58,34 +58,13 @@ tasks:
     src: https://github.com/VORPCORE/VORP-Inventory
     ref: main
     dest: ./resources/[vorp]/VORP-Inventory
-
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_ml_policejob
-    ref: main
-    dest: ./resources/[vorp]/vorp_ml_policejob
-    
+ 
   - action: download_file
     path: ./tmp/files/main.zip
     url: https://github.com/VORPCORE/vorp_ml_policejob/archive/refs/heads/main.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/main.zip
-    
-
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_whitelist
-    ref: main
-    dest: ./resources/[vorp]/vorp_whitelist
-
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_radius
-    ref: main
-    dest: ./resources/[vorp]/vorp_radius
-
- - action: download_github
-    src: https://github.com/VORPCORE/vorp_traffic
-    ref: main
-    dest: ./resources/[vorp]/vorp_traffic
 
  - action: download_github
     src: https://github.com/VORPCORE/vorp_bossmanager
