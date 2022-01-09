@@ -5,15 +5,18 @@ author: VORPCORE & radhwane for TXadmin
 description: REDM vorpcore
 
 tasks:
-  #  Download Base Files
-- action: download_github
+
+  # Download Base Files
+  - action: download_github
     src: https://github.com/RadhwaneDZ/txrecipevorp
     ref: main
     dest: ./tmp/vorp
-    
-- action: move_path
+
+  - action: move_path
     src: ./tmp/vorp/server.cfg
     dest: ./server.cfg
+    
+    
 
    # Prepare Database
   - action: connect_database
